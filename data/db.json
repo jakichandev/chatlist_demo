@@ -1,0 +1,72 @@
+{ "rooms":[
+  {
+    "id": 1,
+    "first_name": "Luca",
+    "last_name": "Brown",
+    "messages": [
+      {
+        "from": "you",
+        "text": "Hey Luca, how's it going?"
+      },
+      {
+        "from": "Luca Brown",
+        "text": "Hi! I'm good, how about you?"
+      },
+      {
+        "from": "you",
+        "text": "Working on a small project, what are you up to?"
+      },
+      {
+        "from": "Luca Brown",
+        "text": "Just finishing some studying for an exam."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "first_name": "Sara",
+    "last_name": "Smith",
+    "messages": [
+      {
+        "from": "you",
+        "text": "Hey Sara, did you see the video I sent?"
+      },
+      {
+        "from": "Sara Smith",
+        "text": "Yes! It made me laugh so much 😂"
+      },
+      {
+        "from": "you",
+        "text": "Haha, I have more if you want!"
+      },
+      {
+        "from": "Sara Smith",
+        "text": "Send them, send them!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "first_name": "Marco",
+    "last_name": "Davis",
+    "messages": [
+      {
+        "from": "you",
+        "text": "Hey Marco, I'm having an issue with React."
+      },
+      {
+        "from": "Marco Davis",
+        "text": "Tell me, maybe I can help."
+      },
+      {
+        "from": "you",
+        "text": "The component doesn't update after the fetch."
+      },
+      {
+        "from": "Marco Davis",
+        "text": "You might not be setting the state correctly."
+      }
+    ]
+  }
+]
+}
