@@ -3,6 +3,7 @@
     "id": 1,
     "first_name": "Luca",
     "last_name": "Brown",
+    "avatar": "https://avatar.iran.liara.run/public/29",
     "messages": [
       {
         "from": "you",
@@ -26,6 +27,7 @@
     "id": 2,
     "first_name": "Sara",
     "last_name": "Smith",
+    "avatar": "https://avatar.iran.liara.run/public/98",
     "messages": [
       {
         "from": "you",
@@ -49,6 +51,7 @@
     "id": 3,
     "first_name": "Marco",
     "last_name": "Davis",
+    "avatar": "https://avatar.iran.liara.run/public/45",
     "messages": [
       {
         "from": "you",
@@ -65,6 +68,54 @@
       {
         "from": "Marco Davis",
         "text": "You might not be setting the state correctly."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "first_name": "Anna",
+    "last_name": "Johnson",
+    "avatar": "https://avatar.iran.liara.run/public/77",
+    "messages": [
+      {
+        "from": "you",
+        "text": "Hey Anna, are we still on for dinner tomorrow?"
+      },
+      {
+        "from": "Anna Johnson",
+        "text": "Yes! Looking forward to it 😊"
+      },
+      {
+        "from": "you",
+        "text": "Great! See you at 7pm."
+      },
+      {
+        "from": "Anna Johnson",
+        "text": "See you then!"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "first_name": "David",
+    "last_name": "Wilson",
+    "avatar": "https://avatar.iran.liara.run/public/12",
+    "messages": [
+      {
+        "from": "you",
+        "text": "Hey David, did you finish the report?"
+      },
+      {
+        "from": "David Wilson",
+        "text": "Almost done, just need to add a few more details."
+      },
+      {
+        "from": "you",
+        "text": "No rush, just let me know when it's ready."
+      },
+      {
+        "from": "David Wilson",
+        "text": "Will do!"
       }
     ]
   }

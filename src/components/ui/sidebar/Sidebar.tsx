@@ -3,13 +3,14 @@ import { Grid } from "@mui/material";
 import SidebarHeader from "./SidebarHeader";
 import ChatList from "./ChatList";
 import type { User } from "../../../types/User";
+import useFetch from "../../../hooks/useFetch";
 
 type SideBarProps = {
   children?: React.ReactNode;
 };
 
 function Sidebar({ children }: SideBarProps) {
-  const [allUsers, setAllUsers] = useState<User[]>([]);
+  const { users: allUsers } = useFetch();
   const [users, setUsers] = useState<User[]>([]);
   const [query, setQuery] = useState<string>("");
 
@@ -29,18 +30,6 @@ function Sidebar({ children }: SideBarProps) {
     filterUsers();
   }, [query, allUsers]);
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/rooms");
-        const data = await response.json();
-        setAllUsers(data as User[]);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchUsers();
-  }, []);
 
   return (
     <Grid padding={2} size={3} bgcolor={"whitesmoke"}>
