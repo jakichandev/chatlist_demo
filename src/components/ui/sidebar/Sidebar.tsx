@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import SidebarHeader from "./SidebarHeader";
+import SkeletonLoader from "../elements/SkeletonLoader";
 import type { User } from "../../../types/User";
 import useFetch from "../../../hooks/useFetch";
 import { lazy, Suspense } from "react";
-import {CircularProgress} from "@mui/material";
 const ChatList = lazy(() => import("./ChatList"));
 
 
@@ -36,7 +36,7 @@ function Sidebar({ children }: SideBarProps) {
   return (
     <Grid padding={2} size={3} bgcolor={"whitesmoke"}>
       <SidebarHeader onChangeQuery={setQuery} />
-      <Suspense fallback={<CircularProgress />}>
+      <Suspense fallback={<SkeletonLoader />}>
         <ChatList users={users} />
       </Suspense>
       {children}

@@ -1,4 +1,4 @@
-import { Typography, Grid, Container, List } from "@mui/material";
+import { Typography, Grid, Container, List, Box } from "@mui/material";
 import ChatHeader from "./ChatHeader";
 import { useEffect, useState } from "react";
 import type { User } from "../../../types/User";
@@ -46,14 +46,41 @@ export default function ChatSpace({ chatId }: ChatSpaceProps) {
   }
 
   return (
-    <Grid container sx={{height: "10rem"}} size={9}>
-      <ChatHeader img={activeChatUser?.avatar} name={activeChatUser?.first_name} />
+    <Grid container sx={{ height: "10rem" }} size={9}>
+      <ChatHeader
+        img={activeChatUser?.avatar}
+        name={activeChatUser?.first_name}
+      />
       <Container>
-        <List>
+        <List
+          sx={{
+            maxHeight: "70vh",
+            overflowY: "auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+            marginTop: 2,
+          }}
+        >
           {activeChatUser?.messages?.map((message, index) => (
-            <Typography key={index} variant="body1">
-              {message.from}: {message.text}
-            </Typography>
+            <Box
+              key={index}
+              sx={{
+                alignSelf: message.from === "you" ? "flex-end" : "flex-start",
+                bgcolor: message.from === "you" ? "primary.main" : "grey.300",
+                color:
+                  message.from === "you"
+                    ? "primary.contrastText"
+                    : "text.primary",
+                p: 1,
+                borderRadius: 2,
+                maxWidth: "70%",
+              }}
+            >
+              <Typography key={index} variant="body1">
+                {message.text}
+              </Typography>
+            </Box>
           ))}
         </List>
       </Container>
