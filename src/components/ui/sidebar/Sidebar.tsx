@@ -10,9 +10,11 @@ const ChatList = lazy(() => import("./ChatList"));
 
 type SideBarProps = {
   children?: React.ReactNode;
+  size?: number | { xs?: number; sm?: number; md?: number };
+  hidden?: boolean;
 };
 
-function Sidebar({ children }: SideBarProps) {
+function Sidebar({ children, size, hidden = false }: SideBarProps) {
   const { users: allUsers } = useFetch();
   const [users, setUsers] = useState<User[]>([]);
   const [query, setQuery] = useState<string>("");
@@ -34,7 +36,7 @@ function Sidebar({ children }: SideBarProps) {
   }, [query, allUsers]);
 
   return (
-    <Grid padding={2} size={3} bgcolor={"whitesmoke"}>
+    <Grid padding={2} size={size} bgcolor={"whitesmoke"} hidden={hidden} >
       <SidebarHeader onChangeQuery={setQuery} />
       <Suspense fallback={<SkeletonLoader />}>
         <ChatList users={users} />

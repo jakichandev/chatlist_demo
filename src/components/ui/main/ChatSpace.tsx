@@ -5,9 +5,16 @@ import type { User } from "../../../types/User";
 
 type ChatSpaceProps = {
   chatId?: string;
+  size?: number | { xs?: number; sm?: number; md?: number };
+  hidden?: boolean;
+
 };
 
-export default function ChatSpace({ chatId }: ChatSpaceProps) {
+export default function ChatSpace({
+  chatId,
+  size,
+  hidden = false,
+}: ChatSpaceProps) {
   const [activeChatUser, setActiveChatUser] = useState<User | null>(null);
   useEffect(() => {
     async function fetchActiveChatUser() {
@@ -31,6 +38,7 @@ export default function ChatSpace({ chatId }: ChatSpaceProps) {
         alignItems={"center"}
         justifyContent={"center"}
         alignContent={"center"}
+        display={hidden ? "none" : "block"}
       >
         <Typography
           variant="h5"
@@ -46,7 +54,12 @@ export default function ChatSpace({ chatId }: ChatSpaceProps) {
   }
 
   return (
-    <Grid container sx={{ height: "10rem" }} size={9}>
+    <Grid
+      container
+      sx={{ height: "10rem" }}
+      size={size}
+      display={hidden ? "none" : "block"}
+    >
       <ChatHeader
         img={activeChatUser?.avatar}
         name={activeChatUser?.first_name}
