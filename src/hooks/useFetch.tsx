@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import type { User } from "../types/User";
+
 export default function useFetch() {
   const [users, setUsers] = useState<User[]>([]);
   useEffect(() => {
@@ -14,5 +15,6 @@ export default function useFetch() {
     };
     fetchUsers();
   }, []);
+
   return { users, setUsers };
 }

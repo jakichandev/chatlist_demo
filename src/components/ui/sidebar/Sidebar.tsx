@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import SidebarHeader from "./SidebarHeader";
-import ChatList from "./ChatList";
 import type { User } from "../../../types/User";
 import useFetch from "../../../hooks/useFetch";
+import { lazy, Suspense } from "react";
+import {CircularProgress} from "@mui/material";
+const ChatList = lazy(() => import("./ChatList"));
+
 
 type SideBarProps = {
   children?: React.ReactNode;
@@ -30,11 +33,12 @@ function Sidebar({ children }: SideBarProps) {
     filterUsers();
   }, [query, allUsers]);
 
-
   return (
     <Grid padding={2} size={3} bgcolor={"whitesmoke"}>
       <SidebarHeader onChangeQuery={setQuery} />
-      <ChatList users={users} />
+      <Suspense fallback={<CircularProgress />}>
+        <ChatList users={users} />
+      </Suspense>
       {children}
     </Grid>
   );
