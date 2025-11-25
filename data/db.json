@@ -7,19 +7,23 @@
     "messages": [
       {
         "from": "you",
-        "text": "Hey Luca, how's it going?"
+        "text": "Hey Luca, how's it going?",
+        "createdAt": "2025-11-25T09:15:00Z"
       },
       {
         "from": "Luca Brown",
-        "text": "Hi! I'm good, how about you?"
+        "text": "Hi! I'm good, how about you?",
+        "createdAt": "2025-11-25T09:16:30Z"
       },
       {
         "from": "you",
-        "text": "Working on a small project, what are you up to?"
+        "text": "Working on a small project, what are you up to?",
+        "createdAt": "2025-11-25T09:18:00Z"
       },
       {
         "from": "Luca Brown",
-        "text": "Just finishing some studying for an exam."
+        "text": "Just finishing some studying for an exam.",
+        "createdAt": "2025-11-25T09:20:15Z"
       }
     ]
   },
@@ -31,19 +35,23 @@
     "messages": [
       {
         "from": "you",
-        "text": "Hey Sara, did you see the video I sent?"
+        "text": "Hey Sara, did you see the video I sent?",
+        "createdAt": "2025-11-24T18:30:00Z"
       },
       {
         "from": "Sara Smith",
-        "text": "Yes! It made me laugh so much 😂"
+        "text": "Yes! It made me laugh so much 😂",
+        "createdAt": "2025-11-24T18:32:45Z"
       },
       {
         "from": "you",
-        "text": "Haha, I have more if you want!"
+        "text": "Haha, I have more if you want!",
+        "createdAt": "2025-11-24T18:35:20Z"
       },
       {
         "from": "Sara Smith",
-        "text": "Send them, send them!"
+        "text": "Send them, send them!",
+        "createdAt": "2025-11-24T18:36:10Z"
       }
     ]
   },
@@ -55,19 +63,23 @@
     "messages": [
       {
         "from": "you",
-        "text": "Hey Marco, I'm having an issue with React."
+        "text": "Hey Marco, I'm having an issue with React.",
+        "createdAt": "2025-11-25T14:10:00Z"
       },
       {
         "from": "Marco Davis",
-        "text": "Tell me, maybe I can help."
+        "text": "Tell me, maybe I can help.",
+        "createdAt": "2025-11-25T14:11:30Z"
       },
       {
         "from": "you",
-        "text": "The component doesn't update after the fetch."
+        "text": "The component doesn't update after the fetch.",
+        "createdAt": "2025-11-25T14:13:00Z"
       },
       {
         "from": "Marco Davis",
-        "text": "You might not be setting the state correctly."
+        "text": "You might not be setting the state correctly.",
+        "createdAt": "2025-11-25T14:15:45Z"
       }
     ]
   },
@@ -79,19 +91,23 @@
     "messages": [
       {
         "from": "you",
-        "text": "Hey Anna, are we still on for dinner tomorrow?"
+        "text": "Hey Anna, are we still on for dinner tomorrow?",
+        "createdAt": "2025-11-23T16:00:00Z"
       },
       {
         "from": "Anna Johnson",
-        "text": "Yes! Looking forward to it 😊"
+        "text": "Yes! Looking forward to it 😊",
+        "createdAt": "2025-11-23T16:02:30Z"
       },
       {
         "from": "you",
-        "text": "Great! See you at 7pm."
+        "text": "Great! See you at 7pm.",
+        "createdAt": "2025-11-23T16:05:00Z"
       },
       {
         "from": "Anna Johnson",
-        "text": "See you then!"
+        "text": "See you then!",
+        "createdAt": "2025-11-23T16:06:15Z"
       }
     ]
   },
@@ -103,19 +119,51 @@
     "messages": [
       {
         "from": "you",
-        "text": "Hey David, did you finish the report?"
+        "text": "Hey David, did you finish the report?",
+        "createdAt": "2025-11-25T11:20:00Z"
       },
       {
         "from": "David Wilson",
-        "text": "Almost done, just need to add a few more details."
+        "text": "Almost done, just need to add a few more details.",
+        "createdAt": "2025-11-25T11:22:30Z"
       },
       {
         "from": "you",
-        "text": "No rush, just let me know when it's ready."
+        "text": "No rush, just let me know when it's ready.",
+        "createdAt": "2025-11-25T11:25:00Z"
       },
       {
         "from": "David Wilson",
-        "text": "Will do!"
+        "text": "Will do!",
+        "createdAt": "2025-11-25T11:26:45Z"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "first_name": "Emily",
+    "last_name": "Garcia",
+    "avatar": "https://avatar.iran.liara.run/public/63",
+    "messages": [
+      {
+        "from": "you",
+        "text": "Hey Emily, how was your trip?",
+        "createdAt": "2025-11-22T10:00:00Z"
+      },
+      {
+        "from": "Emily Garcia",
+        "text": "It was amazing! I visited so many places.",
+        "createdAt": "2025-11-22T10:02:30Z"
+      },
+      {
+        "from": "you",
+        "text": "Can't wait to see the photos!",
+        "createdAt": "2025-11-22T10:05:00Z"
+      },
+      {
+        "from": "Emily Garcia",
+        "text": "I'll send them to you later today.",
+        "createdAt": "2025-11-22T10:06:15Z"
       }
     ]
   }

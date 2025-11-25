@@ -3,8 +3,8 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import Sidebar from "./components/ui/sidebar/Sidebar";
-import ChatSpace from "./components/ui/main/ChatSpace";
+import Sidebar from "../components/ui/sidebar/Sidebar";
+import ChatSpace from "../components/ui/main/ChatSpace";
 
 function Root() {
   const isSmallScreen = useMediaQuery('(max-width:800px)');

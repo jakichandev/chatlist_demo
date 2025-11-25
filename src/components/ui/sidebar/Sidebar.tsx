@@ -36,7 +36,7 @@ function Sidebar({ children, size, hidden = false }: SideBarProps) {
   }, [query, allUsers]);
 
   return (
-    <Grid padding={2} size={size} bgcolor={"whitesmoke"} hidden={hidden} >
+    <Grid padding={2} size={size} bgcolor={"whitesmoke"} display={hidden ? "none" : "block"} >
       <SidebarHeader onChangeQuery={setQuery} />
       <Suspense fallback={<SkeletonLoader />}>
         <ChatList users={users} />

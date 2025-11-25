@@ -8,7 +8,7 @@ type ChatListProps = {
 };
 
 function ChatList({ users }: ChatListProps) {
-  const isSmallScreen = useMediaQuery('(max-width: 60px)');
+  const isSmallScreen = useMediaQuery('(max-width: 600px)');
   return (
     <Box marginTop={2}>
       {users?.map((user) => (

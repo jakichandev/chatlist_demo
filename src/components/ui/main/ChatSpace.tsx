@@ -1,7 +1,9 @@
-import { Typography, Grid, Container, List, Box } from "@mui/material";
+import { Typography, Grid, Container, OutlinedInput, Box } from "@mui/material";
 import ChatHeader from "./ChatHeader";
 import { useEffect, useState } from "react";
 import type { User } from "../../../types/User";
+import MessageList from "./MessageList";
+import { Send } from "@mui/icons-material";
 
 type ChatSpaceProps = {
   chatId?: string;
@@ -15,6 +17,7 @@ export default function ChatSpace({
   size,
   hidden = false,
 }: ChatSpaceProps) {
+  
   const [activeChatUser, setActiveChatUser] = useState<User | null>(null);
   useEffect(() => {
     async function fetchActiveChatUser() {
@@ -30,6 +33,7 @@ export default function ChatSpace({
     fetchActiveChatUser();
   }, [chatId]);
 
+  /* If no chatId is provided, show a welcome message */
   if (!chatId) {
     return (
       <Grid
@@ -53,50 +57,25 @@ export default function ChatSpace({
     );
   }
 
+
   return (
     <Grid
       container
-      sx={{ height: "10rem" }}
+      height={"100%"}
       size={size}
+      position={"relative"}
       display={hidden ? "none" : "block"}
     >
       <ChatHeader
         img={activeChatUser?.avatar}
         name={activeChatUser?.first_name}
       />
-      <Container>
-        <List
-          sx={{
-            maxHeight: "70vh",
-            overflowY: "auto",
-            display: "flex",
-            flexDirection: "column",
-            gap: 2,
-            marginTop: 2,
-          }}
-        >
-          {activeChatUser?.messages?.map((message, index) => (
-            <Box
-              key={index}
-              sx={{
-                alignSelf: message.from === "you" ? "flex-end" : "flex-start",
-                bgcolor: message.from === "you" ? "primary.main" : "grey.300",
-                color:
-                  message.from === "you"
-                    ? "primary.contrastText"
-                    : "text.primary",
-                p: 1,
-                borderRadius: 2,
-                maxWidth: "70%",
-              }}
-            >
-              <Typography key={index} variant="body1">
-                {message.text}
-              </Typography>
-            </Box>
-          ))}
-        </List>
+      <Container sx={{paddingX: 2}}>
+        <MessageList activeChatUser={activeChatUser} />
       </Container>
+      <Box position={"absolute"} sx={{bottom: 4, width: "100%"}}>
+        <OutlinedInput placeholder="Send a message" endAdornment={<Send color="primary" cursor="pointer" />} sx={{width: "calc(100% - 0.5rem)"}} />
+      </Box>
     </Grid>
   );
 }
